@@ -126,8 +126,9 @@ button{
     background-color: #842F18;
 }
 button:hover{
+    transition: 1s ease;
     cursor:pointer;
-    background-color: #842f186e;
+    background-color: #501201;
 }
 .footer{
     display: flex;

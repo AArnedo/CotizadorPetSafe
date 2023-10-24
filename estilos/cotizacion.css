@@ -1,0 +1,194 @@
+/* Import FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap");
+/* fonts-family  
+font-family: 'Marcellus SC', serif;
+font-family: 'Meera Inimai', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../assets/img/fondoPerro.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  width: 30%;
+  min-height: 500px;
+  background: #fee3d681;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 35px 0 35px;
+}
+
+.container h1 {
+  font-size: 38px;
+  font-family: "Marcellus SC", serif;
+  font-weight: 800;
+  margin: 0 0 30px 0;
+}
+.container .form-principal {
+  width: 100%;
+  overflow: hidden;
+}
+.form-principal form {
+  display: flex;
+  width: 400%;
+}
+.form-principal form .pagina {
+  width: 25%;
+  transition: margin-left 0.5s ease-in-out;
+}
+.form-principal form .pagina h2 {
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Marcellus SC", serif;
+}
+.form-principal form .pagina .campo {
+  height: 35px;
+  width: 350px;
+  margin: 40px 0;
+  display: flex;
+  position: relative;
+}
+.form-principal form .pagina .campo label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+  font-size: 18px;
+  font-style: italic;
+  float: left;
+  text-align: left;
+  width: 100%;
+}
+.form-principal form .pagina .campo input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  font: 16px;
+  padding-left: 15px;
+}
+.form-principal form .pagina .campo select {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.form-principal form .pagina .campo button {
+  width: 50%;
+  border-radius: 20px;
+  border: solid 2px #ffb4a0;
+  font-family: "Marcellus SC", serif;
+  font-size: 16px;
+  color: #ffb4a0;
+  background-color: #842f18;
+  margin-top: -10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.form-principal form .pagina .campo button:hover{
+    background-color:#5e1400;
+}
+
+.container .barra-progreso{
+    display: flex;
+    margin: 40px 0;
+}
+.container .barra-progreso .paso{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.barra-progreso .paso p{
+    font-size: 16 px;
+    font-weight: 200;
+    color: #000;
+    margin-bottom: 10px;
+    transition: .2s;
+}
+.barra-progreso .paso p.active{
+  color: #5e1400;
+}
+
+.barra-progreso .paso .num{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #842f18;
+    border-radius: 50%;
+    display: inline-block;
+    font-weight: 800;
+    font-size: 21px;
+    line-height: 25px;
+    transition: .2s;
+}
+.barra-progreso .paso .num.active{
+  border-color: rgb(0, 0, 0);
+}
+
+
+.barra-progreso .paso .num span{
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.barra-progreso .paso .num.active span{
+  display: none;
+}
+
+.barra-progreso .paso .check{
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
+}
+.barra-progreso .paso .check.active{
+  display: block;
+  color: #5e1400;
+}
+
+.barra-progreso .paso .num::before,
+.barra-progreso .paso .num::after{
+    position: absolute;
+    content: '';
+    width: 120px;
+    height: 3px;
+    bottom: 11px;
+    right: -140px;
+    background-color: #fff;
+}
+.barra-progreso .paso:last-child .num::before,
+.barra-progreso .paso:last-child .num::after{
+    display: none;
+}
+.barra-progreso .paso .num.active::after{
+    background-color: #5e1400;
+    animation: movingLine 0.5s linear forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes movingLine{
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+/* Alert Botón Final */
