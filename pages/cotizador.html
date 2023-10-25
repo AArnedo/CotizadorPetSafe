@@ -12,15 +12,17 @@
     <title>PetSafe | Formulario de Cotización</title>
     <!-- Link Css -->
     <link rel="stylesheet" href="../estilos/cotizacion.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <script defer src="../script/movimiento.js"></script>
+    <script src="../script/cotizacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   </head>
   <body>
     <main class="container">
       <h1>¡Tu mejor amigo, protegido!</h1>
-
       <div class="barra-progreso">
         <div class="paso">
           <p>Mascota</p>
@@ -38,37 +40,39 @@
         </div>
       </div>
 
-
       <div class="form-principal">
         <form action="#">
           <!-- Primera pagina -->
           <div class="pagina movPage">
             <h2>Datos de tu mascota</h2>
             <div class="campo">
-              <label>¿Que tipo de mascota tienes? <b class="error" id="mascota-error"></b></label>
+              <label
+                >¿Que tipo de mascota tienes?
+                <b class="error" id="mascota-error"></b
+              ></label>
               <select name="mascota" id="mascota">
-                <option value="mascota">Selecciona una mascota</option>
+                <option value="">Selecciona una mascota</option>
                 <option value="perro">Perro</option>
                 <option value="gato">Gato</option>
               </select>
             </div>
             <div class="campo">
-              <label>Nombre de tu mascota:</label>
-              <input type="text"/>
+              <label for="nombre_mascota">Nombre de tu mascota:</label>
+              <input name="nombre_mascota" type="text" placeholder="Escribí aquí el nombre de tu mascota"/>
             </div>
             <div class="campo">
-              <label>Edad de tu mascota: <b class="error" id="edad-error"></b></label>
-              <select name="edad" id="edad">
+              <label for="edad_mascota">Edad de tu mascota:</label>
+              <select name="edad_mascota" id="edad_mascota">
                 <option value="">Selecciona una Edad</option>
-                <option value="cachorro-1año">Cachorro - 1 AÑO</option>
-                <option value="1y3">1 - 3 AÑOS</option>
-                <option value="3y6">3 - 6 AÑOS</option>
-                <option value="mas-de-6">+ 6 AÑOS</option>
+                <option value="cachorro-1año">Cachorro - 1 año</option>
+                <option value="1y3">1 - 3 años</option>
+                <option value="3y6">3 - 6 años</option>
+                <option value="mas-de-6">+ 6 años</option>
               </select>
             </div>
             <div class="campo perroRaza">
-              <label>Raza de tu mascota (Opcional) <b class="error" id="raza-error"></b></label>
-              <select name="razaPerro" id="raza">
+              <label for="raza_mascota">Raza de tu mascota (Opcional)</label>
+              <select name="raza_mascota" id="raza_mascota">
                 <option value="">Seleccione una Raza</option>
                 <option value="Sin Raza">No tiene Raza</option>
                 <option value="Caniche">Caniche</option>
@@ -82,20 +86,38 @@
                 <option value="Ovejero Aleman">Ovejero Alemán</option>
               </select>
             </div>
-           <div class="campo sigPage">
+            <div class="campo">
+              <label>Seleccione tipo de Plan</label>
+              <div class="boxcheck">
+                <h4>Básico</h4>
+                <input type="radio" name="plan" value="basico" checked />
+              </div>
+              <div class="boxcheck">
+                <h4>Intermedio</h4>
+                <input type="radio" name="plan" value="intermedio" />
+              </div>
+              <div class="boxcheck">
+                <h4>Premium</h4>
+                <input type="radio" name="plan" value="premium" />
+              </div>
+            </div>
+            <div class="campo sigPage">
               <button>Siguiente</button>
             </div>
+            <a class="btn-inicio" href="../index.html">Inicio</a>
           </div>
 
           <!-- Segunda pagina -->
           <div class="pagina movPage">
-            <h2>Necesitamos tus Datos</h2>
+            <h2>Datos del Dueñ@</h2>
             <div class="campo">
-              <label>Nombre y Apellido: <b class="error" id="user-error"></b></label>
-              <input type="text" name="user" id="user" />
+              <label for="nombre-dueño">Nombre y Apellido:</label>
+              <input type="text" name="user" id="nombre-dueño" />
             </div>
             <div class="campo">
-              <label>Numero de Documento: <b class="error" id="dni-error"></b></label>
+              <label
+                >Numero de Documento: <b class="error" id="dni-error"></b
+              ></label>
               <input type="number" id="dni" placeholder="DNI" />
             </div>
             <div class="campo">
