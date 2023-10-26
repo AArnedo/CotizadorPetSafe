@@ -22,7 +22,7 @@ body {
   background-position: center;
 }
 .container {
-  width: 30%;
+  width: 500px;
   min-height: 500px;
   background: #fee3d681;
   border-radius: 10px;
@@ -90,13 +90,8 @@ body {
 }
 .form-principal form .pagina .campo select option{
   background-color: #5e1400;
-  color: #fff;
-}
-.form-principal form .pagina .campo .boxcheck{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 5px;
+  font-family: "Marcellus SC", serif;
+  color: #ffb4a0;
 }
 .form-principal form .pagina .campo h4{
   font-family:"Marcellus SC", serif;
@@ -155,7 +150,6 @@ body {
 .barra-progreso .paso p.active{
   color: #5e1400;
 }
-
 .barra-progreso .paso .num{
     position: relative;
     width: 25px;
@@ -171,8 +165,6 @@ body {
 .barra-progreso .paso .num.active{
   border-color: rgb(0, 0, 0);
 }
-
-
 .barra-progreso .paso .num span{
     font-size: 20px;
     line-height: 20px;
@@ -183,7 +175,6 @@ body {
 .barra-progreso .paso .num.active span{
   display: none;
 }
-
 .barra-progreso .paso .check{
     display: none;
     position: absolute;
@@ -201,18 +192,18 @@ body {
 .barra-progreso .paso .num::after{
     position: absolute;
     content: '';
-    width: 120px;
+    width: 150px;
     height: 3px;
     bottom: 11px;
-    right: -140px;
-    background-color: #fff;
+    right: -170px;
+    background-color: #000;
 }
 .barra-progreso .paso:last-child .num::before,
 .barra-progreso .paso:last-child .num::after{
     display: none;
 }
 .barra-progreso .paso .num.active::after{
-    background-color: #5e1400;
+    background-color: green;
     animation: movingLine 0.5s linear forwards;
     transform: scaleX(0);
     transform-origin: left;
@@ -223,9 +214,23 @@ body {
         transform: scaleX(1);
     }
 }
-
+/* Clases utilizadas con JavaScript */
 .divResultado{
   text-align: center;
-  padding: .5rem;
-  border: 1px solid;
+  padding: 5rem;
+  border: 1px solid #5e1400;
+}
+.divResultado h1{
+  font-size: 21px;
+  color: #842f18;
+}
+.divResultado h1 h2{
+  font-size: 16px;
+}
+
+/* Medias Queries */
+@media (max-width:768px){
+  .container {
+    width: 250px;
+  }
 }

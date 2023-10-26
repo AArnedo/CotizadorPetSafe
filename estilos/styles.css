@@ -97,11 +97,11 @@ body{
 
 .cotiza{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin: 50px 0;
 }
 .cotiza p{
-    width: 50%;
+    max-width: 30em;
     font-family: 'Meera Inimai', sans-serif; 
     color: #FEE3D6;
     font-size: 26px;
@@ -152,4 +152,34 @@ button:hover{
 }
 .redes a{
     padding: 0 20px;
+}
+
+/* MediaQueries */
+
+@media (max-width:768px){
+    .hero h1{
+        position: relative;
+        top: -100px;
+        font-size: 48px;
+    }
+    .hero p{
+        position: relative;
+        top: -100px;
+        font-size: 18px;
+    }
+    .txt-2 p{
+        font-size: 28px;
+       text-align: center;
+    }
+    .beneficios h2{
+        font-size: 28px;
+        text-align: center;
+    }
+    .cotiza{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    button{
+        left: 30%;
+    }
 }

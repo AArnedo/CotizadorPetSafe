@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <script defer src="../script/movimiento.js"></script>
+    <script defer src="../script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
@@ -54,13 +54,8 @@
               </select>
             </div>
             <div class="campo">
-              <label for="nombre_mascota">Nombre de tu mascota:</label>
-              <input
-                id="nombre_mascota"
-                name="nombre_mascota"
-                type="text"
-                placeholder="Escribí aquí el nombre de tu mascota"
-              />
+              <label for="nameMascota">Nombre de tu mascota:</label>
+              <input id="nameMascota" name="nombre_mascota" type="text" placeholder="Escribí aquí el nombre de tu mascota"/>
             </div>
             <div class="campo">
               <label for="edad">Edad de tu mascota:</label>
@@ -73,7 +68,7 @@
               </select>
             </div>
             <div class="campo perroRaza">
-              <label for="raza">Raza de tu mascota (Opcional)</label>
+              <label for="raza">Raza de tu mascota</label>
               <select name="raza" id="raza">
                 <option value="">Seleccione una Raza</option>
                 <option value="sinRaza">No tiene Raza</option>
@@ -89,30 +84,12 @@
               </select>
             </div>
             <div class="campo">
-              <label for="plan">Seleccione tipo de Plan</label>
-              <div class="boxcheck">
-                <h4>Básico</h4>
-                <input
-                  type="radio"
-                  name="plan"
-                  value="basico"
-                  id="basico"
-                  checked
-                />
-              </div>
-              <div class="boxcheck">
-                <h4>Intermedio</h4>
-                <input
-                  type="radio"
-                  name="plan"
-                  value="intermedio"
-                  id="intermedio"
-                />
-              </div>
-              <div class="boxcheck">
-                <h4>Premium</h4>
-                <input type="radio" name="plan" value="premium" id="premium" />
-              </div>
+              <label for="plan">Seleccione el Plan:</label>
+              <select id="plan" name="plan">
+                <option value="basico">Básico</option>
+                <option value="intermedio">Intermedio</option>
+                <option value="premium">Premium</option>
+              </select>
             </div>
             <div class="campo sigPage">
               <button>Siguiente</button>
@@ -143,15 +120,12 @@
             </div>
             <div class="campo btns">
               <button class="volver-pag">Atrás</button>
-              <button class="btn-finalizar">
-                Finalizar
-              </button>
+              <button class="btn-finalizar">Finalizar</button>
             </div>
           </div>
           <div class="pagina movPage">
-            <div class="" id="resultado" style="display: none">
-
-            </div>
+            <div class="" id="resultado" style="display: none"></div>
+            <div class="" id="dolar" style="display: none;"></div>
           </div>
         </form>
       </div>
