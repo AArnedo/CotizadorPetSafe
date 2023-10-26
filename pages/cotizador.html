@@ -17,7 +17,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <script defer src="../script/movimiento.js"></script>
-    <script src="../script/cotizacion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
@@ -42,14 +41,12 @@
 
       <div class="form-principal">
         <form action="#">
+          <div id="mensaje_error"></div>
           <!-- Primera pagina -->
           <div class="pagina movPage">
             <h2>Datos de tu mascota</h2>
             <div class="campo">
-              <label
-                >¿Que tipo de mascota tienes?
-                <b class="error" id="mascota-error"></b
-              ></label>
+              <label for="mascota">¿Que tipo de mascota tienes?</label>
               <select name="mascota" id="mascota">
                 <option value="">Selecciona una mascota</option>
                 <option value="perro">Perro</option>
@@ -58,47 +55,63 @@
             </div>
             <div class="campo">
               <label for="nombre_mascota">Nombre de tu mascota:</label>
-              <input name="nombre_mascota" type="text" placeholder="Escribí aquí el nombre de tu mascota"/>
+              <input
+                id="nombre_mascota"
+                name="nombre_mascota"
+                type="text"
+                placeholder="Escribí aquí el nombre de tu mascota"
+              />
             </div>
             <div class="campo">
-              <label for="edad_mascota">Edad de tu mascota:</label>
-              <select name="edad_mascota" id="edad_mascota">
+              <label for="edad">Edad de tu mascota:</label>
+              <select name="edad" id="edad">
                 <option value="">Selecciona una Edad</option>
-                <option value="cachorro-1año">Cachorro - 1 año</option>
-                <option value="1y3">1 - 3 años</option>
-                <option value="3y6">3 - 6 años</option>
-                <option value="mas-de-6">+ 6 años</option>
+                <option value="año1">Cachorro - 1 año</option>
+                <option value="año2">1 - 3 años</option>
+                <option value="año3">3 - 6 años</option>
+                <option value="año4">+ 6 años</option>
               </select>
             </div>
             <div class="campo perroRaza">
-              <label for="raza_mascota">Raza de tu mascota (Opcional)</label>
-              <select name="raza_mascota" id="raza_mascota">
+              <label for="raza">Raza de tu mascota (Opcional)</label>
+              <select name="raza" id="raza">
                 <option value="">Seleccione una Raza</option>
-                <option value="Sin Raza">No tiene Raza</option>
-                <option value="Caniche">Caniche</option>
-                <option value="Pitbull">Pitbull</option>
-                <option value="Bulldog">Bulldog</option>
-                <option value="Salchicha">Salchicha</option>
-                <option value="Schnauzer">Schnauzer</option>
-                <option value="Dogo Argentino">Dogo Argentino</option>
-                <option value="Golden Retriever">Golden Retriever</option>
-                <option value="Beagle">Beagle</option>
-                <option value="Ovejero Aleman">Ovejero Alemán</option>
+                <option value="sinRaza">No tiene Raza</option>
+                <option value="caniche">Caniche</option>
+                <option value="pitbull">Pitbull</option>
+                <option value="bulldog">Bulldog</option>
+                <option value="salchicha">Salchicha</option>
+                <option value="schnauzer">Schnauzer</option>
+                <option value="dogoArgentino">Dogo Argentino</option>
+                <option value="goldenRetriever">Golden Retriever</option>
+                <option value="beagle">Beagle</option>
+                <option value="ovejero">Ovejero Alemán</option>
               </select>
             </div>
             <div class="campo">
-              <label>Seleccione tipo de Plan</label>
+              <label for="plan">Seleccione tipo de Plan</label>
               <div class="boxcheck">
                 <h4>Básico</h4>
-                <input type="radio" name="plan" value="basico" checked />
+                <input
+                  type="radio"
+                  name="plan"
+                  value="basico"
+                  id="basico"
+                  checked
+                />
               </div>
               <div class="boxcheck">
                 <h4>Intermedio</h4>
-                <input type="radio" name="plan" value="intermedio" />
+                <input
+                  type="radio"
+                  name="plan"
+                  value="intermedio"
+                  id="intermedio"
+                />
               </div>
               <div class="boxcheck">
                 <h4>Premium</h4>
-                <input type="radio" name="plan" value="premium" />
+                <input type="radio" name="plan" value="premium" id="premium" />
               </div>
             </div>
             <div class="campo sigPage">
@@ -130,7 +143,14 @@
             </div>
             <div class="campo btns">
               <button class="volver-pag">Atrás</button>
-              <button class="btn-finalizar">Finalizar</button>
+              <button class="btn-finalizar">
+                Finalizar
+              </button>
+            </div>
+          </div>
+          <div class="pagina movPage">
+            <div class="" id="resultado" style="display: none">
+
             </div>
           </div>
         </form>

@@ -224,4 +224,8 @@ body {
     }
 }
 
-/* Alert Botón Final */
+.divResultado{
+  text-align: center;
+  padding: .5rem;
+  border: 1px solid;
+}
